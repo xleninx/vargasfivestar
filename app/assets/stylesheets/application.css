@@ -42,3 +42,7 @@
  .tp-caption.block_black{
    background-color: rgba(0, 0, 0, 0.4);
  }
+
+#footer .dark{
+  height: auto;
+}
