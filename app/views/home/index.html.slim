@@ -1,537 +1,387 @@
-= render 'header'
+/ doctype html
+/ /![if IE 8] <html class="ie ie8"
+/ /![if IE 9] <html class="ie ie9"
+/ /! [if gt IE 9]><!
+/ html
+/   /! <![endif]
+/   head
+/     meta charset="utf-8" /
+/     title Vargas fi
+/     meta content="HTML5,CSS3,Template" name="keywords" /
+/     meta content="" name="description" /
+/     meta content=("Dorin Grigoras [www.stepofweb.com]") name="Author" /
+/     meta content="IE=edge" http-equiv="X-UA-Compatible" /
+/     /! mobile settings
+/     meta content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" name="viewport" /
+/     /! Favicon
+/     link href="assets/images/demo/favicon.ico" rel=("shortcut icon") /
+/     /! WEB FONTS
+/     
+/     /! CORE CSS
+/     link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/sky-forms.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/weather-icons.min.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/line-icons.css" rel="stylesheet" type="text/css" /
+/     link href="assets/plugins/owl-carousel/owl.pack.css" rel="stylesheet" type="text/css" /
+/     link href="assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/animate.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/flexslider.css" rel="stylesheet" type="text/css" /
+/     /! REVOLUTION SLIDER
+/     link href="assets/css/revolution-slider.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/layerslider.css" rel="stylesheet" type="text/css" /
+/     /! THEME CSS
+/     link href="assets/css/essentials.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/layout.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/header-2.css" rel="stylesheet" type="text/css" /
+/     link href="assets/css/footer-default.css" rel="stylesheet" type="text/css" /
+/     link#color_scheme href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" /
+/     /! Morenizr
+/     script src="assets/plugins/modernizr.min.js" type="text/javascript" 
+/     /![if lte IE 8]
+/       | <script src="assets/plugins/respond.js"></script
+/   /!
+/     | Available body classes:
+/     | smoothscroll			= enable chrome browser smooth scroll
+/     | grey 					= grey content background
+/     | boxed 					= boxed style
+/     | pattern1 ... pattern10 	= background pattern
+/     
+/     | Background Image - add to body:
+/     | data-background="assets/images/boxed_background/1.jpg"
+/     
+/     | Examples:
+/     | <body class="smoothscroll grey boxed pattern3"
+/     | <body class="smoothscroll boxed" data-background="assets/images/boxed_background/1.jpg"
 
-section#main-slider.no-margin
-  .carousel.slide
-    ol.carousel-indicators
-      li.active data-slide-to="0" data-target="#main-slider"
-      li data-slide-to="1" data-target="#main-slider"
-      li data-slide-to="2" data-target="#main-slider"
-    .carousel-inner
-      .item.active style=("background-image: url(#{image_path('slider/bg1.jpg')})")
-        .container
-          .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Recorre todo el mundo y deja todo en nuestras manos.
-                h2.animation.animated-item-2 Te garantizamos que tu viaje sera inolvidable
-                a.btn-slide.animation.animated-item-3 href="#"  Leer Mas
-            .col-sm-6.hidden-xs.animation.animated-item-4
-              .slider-img
-                = image_tag('slider/img1.png', class:'img-responsive')
-      /! /.item
-      .item style=("background-image: url(#{image_path('slider/bg2.jpg')})")
-        .container
-          .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Contamos con todos los servicios de asistencia que necesites.
-                h2.animation.animated-item-2 Redes, Wifi, Telefonia Celular, para que contactes con tu familia luego de un largo viaje.
-                a.btn-slide.animation.animated-item-3 href="#"  Leer Mas
-            .col-sm-6.hidden-xs.animation.animated-item-4
-              .slider-img
-                = image_tag('slider/img2.png', class:'img-responsive')
-      /! /.item
-      .item style=("background-image: url(#{image_path('slider/bg3.jpg')})")
-        .container
-          .row.slide-margin
-            .col-sm-6
-              .carousel-content
-                h1.animation.animated-item-1 Ubicacion Privilegiada dentro del Aereopuerto Simon Bolivar de Vemezuela.
-                h2.animation.animated-item-2 Dos oficinas acondicionadas para recibirte y ofrecerte el mejor servicio que se pueda esperar.
-                a.btn-slide.animation.animated-item-3 href="#"  Leer Mas
-            .col-sm-6.hidden-xs.animation.animated-item-4
-              .slider-img
-                = image_tag('slider/img3.png', class:'img-responsive')
-      /! /.item
-    /! /.carousel-inner
-  /! /.carousel
-  a.prev.hidden-xs data-slide="prev" href="#main-slider"
-    i.fa.fa-chevron-left
-  a.next.hidden-xs data-slide="next" href="#main-slider"
-    i.fa.fa-chevron-right
-/! /#main-slider
-section#feature
-  .container
-    .center.wow.fadeInDown
-      h2 Servicios
-      p.lead
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        br/
-        | et dolore magna aliqua. Ut enim ad minim veniam
-    .row
-      .features
-        .col-md-4.col-sm-6.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-          .feature-wrap
-            i.fa.fa-child
-            h2 Asistencias
-            h3 Te ayudamos con cualquier percanse durante tu viaje
-        /! /.col-md-4
-        .col-md-4.col-sm-6.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-          .feature-wrap
-            i.fa.fa-shield
-            h2 Seguridad
-            h3 Seremos tu angel guardian durante tu preciado viaje.
-        /! /.col-md-4
-        .col-md-4.col-sm-6.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-          .feature-wrap
-            i.fa.fa-bus
-            h2 Translados
-            h3 Al hotel, tu conexion, City Tours, a donde necesites ir.
-        /! /.col-md-4
-        .col-md-4.col-sm-6.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-          .feature-wrap
-            i.fa.fa-wheelchair
-            h2 Asistencia Especial
-            h3 Apoyo a personas con movilidad reducidad o de tercera edad.
-        /! /.col-md-4
-        .col-md-4.col-sm-6.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-          .feature-wrap
-            i.fa.fa-map-marker
-            h2 Ubicacion
-            h3 Persencia en los Aereopuertos Nacional, Auxilia e Internacional.
-        /! /.col-md-4
-        .col-md-4.col-sm-6.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-          .feature-wrap
-            i.fa.fa-credit-card
-            h2 Check-In
-            h3 Chequeo de boletos en vuelos en conexion de forma rapida.
-        /! /.col-md-4
-      /! /.services
-    /! /.row
-  /! /.container
-/! /#feature
-/ section#recent-works
-/   .container
-/     .center.wow.fadeInDown
-/       h2 Recent Works
-/       p.lead
-/         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-/         br/
-/         | et dolore magna aliqua. Ut enim ad minim veniam
-/     .row
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item1.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item1.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item2.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item2.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item3.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item3.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item4.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item4.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item5.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item5.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item6.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item6.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item7.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item7.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/       .col-xs-12.col-sm-4.col-md-3
-/         .recent-work-wrap
-/           img.img-responsive alt="" src="images/portfolio/recent/item8.png" /
-/           .overlay
-/             .recent-work-inner
-/               h3
-/                 a href="#"  Business theme
-/               p There are many variations of passages of Lorem Ipsum available, but the majority
-/               a.preview href="images/portfolio/full/item8.png" rel="prettyPhoto"
-/                 i.fa.fa-eye
-/                 | View
-/     /! /.row
-/   /! /.container
-/ /! /#recent-works
-/ section#services.service-item
-/   .container
-/     .center.wow.fadeInDown
-/       h2 Our Service
-/       p.lead
-/         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-/         br/
-/         | et dolore magna aliqua. Ut enim ad minim veniam
-/     .row
-/       .col-sm-6.col-md-4
-/         .media.services-wrap.wow.fadeInDown
-/           .pull-left
-/             img.img-responsive src="images/services/services1.png" /
-/           .media-body
-/             h3.media-heading SEO Marketing
-/             p Lorem ipsum dolor sit ame consectetur adipisicing elit
-/       .col-sm-6.col-md-4
-/         .media.services-wrap.wow.fadeInDown
-/           .pull-left
-/             img.img-responsive src="images/services/services2.png" /
-/           .media-body
-/             h3.media-heading SEO Marketing
-/             p Lorem ipsum dolor sit ame consectetur adipisicing elit
-/       .col-sm-6.col-md-4
-/         .media.services-wrap.wow.fadeInDown
-/           .pull-left
-/             img.img-responsive src="images/services/services3.png" /
-/           .media-body
-/             h3.media-heading SEO Marketing
-/             p Lorem ipsum dolor sit ame consectetur adipisicing elit
-/       .col-sm-6.col-md-4
-/         .media.services-wrap.wow.fadeInDown
-/           .pull-left
-/             img.img-responsive src="images/services/services4.png" /
-/           .media-body
-/             h3.media-heading SEO Marketing
-/             p Lorem ipsum dolor sit ame consectetur adipisicing elit
-/       .col-sm-6.col-md-4
-/         .media.services-wrap.wow.fadeInDown
-/           .pull-left
-/             img.img-responsive src="images/services/services5.png" /
-/           .media-body
-/             h3.media-heading SEO Marketing
-/             p Lorem ipsum dolor sit ame consectetur adipisicing elit
-/       .col-sm-6.col-md-4
-/         .media.services-wrap.wow.fadeInDown
-/           .pull-left
-/             img.img-responsive src="images/services/services6.png" /
-/           .media-body
-/             h3.media-heading SEO Marketing
-/             p Lorem ipsum dolor sit ame consectetur adipisicing elit
-/     /! /.row
-/   /! /.container
-/ /! /#services
-/ section#middle
-/   .container
-/     .row
-/       .col-sm-6.wow.fadeInDown
-/         .skill
-/           h2 Our Skills
-/           p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-/           .progress-wrap
-/             h3 Graphic Design
-/             .progress
-/               .progress-bar.color1 aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" style=("width: 85%")
-/                 span.bar-width 85%
-/           .progress-wrap
-/             h3 HTML
-/             .progress
-/               .progress-bar.color2 aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" style=("width: 95%")
-/                 span.bar-width 95%
-/           .progress-wrap
-/             h3 CSS
-/             .progress
-/               .progress-bar.color3 aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" style=("width: 80%")
-/                 span.bar-width 80%
-/           .progress-wrap
-/             h3 Wordpress
-/             .progress
-/               .progress-bar.color4 aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" style=("width: 90%")
-/                 span.bar-width 90%
-/       /! /.col-sm-6
-/       .col-sm-6.wow.fadeInDown
-/         .accordion
-/           h2 Why People like us?
-/           #accordion1.panel-group
-/             .panel.panel-default
-/               .panel-heading.active
-/                 h3.panel-title
-/                   a.accordion-toggle data-parent="#accordion1" data-toggle="collapse" href="#collapseOne1"
-/                     | Lorem ipsum dolor sit amet
-/                     i.fa.fa-angle-right.pull-right
-/               #collapseOne1.panel-collapse.collapse.in
-/                 .panel-body
-/                   .media.accordion-inner
-/                     .pull-left
-/                       img.img-responsive src="images/accordion1.png" /
-/                     .media-body
-/                       h4 Adipisicing elit
-/                       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-/             .panel.panel-default
-/               .panel-heading
-/                 h3.panel-title
-/                   a.accordion-toggle data-parent="#accordion1" data-toggle="collapse" href="#collapseTwo1"
-/                     | Lorem ipsum dolor sit amet
-/                     i.fa.fa-angle-right.pull-right
-/               #collapseTwo1.panel-collapse.collapse
-/                 .panel-body
-/                   | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
-/             .panel.panel-default
-/               .panel-heading
-/                 h3.panel-title
-/                   a.accordion-toggle data-parent="#accordion1" data-toggle="collapse" href="#collapseThree1"
-/                     | Lorem ipsum dolor sit amet
-/                     i.fa.fa-angle-right.pull-right
-/               #collapseThree1.panel-collapse.collapse
-/                 .panel-body
-/                   | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
-/             .panel.panel-default
-/               .panel-heading
-/                 h3.panel-title
-/                   a.accordion-toggle data-parent="#accordion1" data-toggle="collapse" href="#collapseFour1"
-/                     | Lorem ipsum dolor sit amet
-/                     i.fa.fa-angle-right.pull-right
-/               #collapseFour1.panel-collapse.collapse
-/                 .panel-body
-/                   | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
-/           /! /#accordion1
-/     /! /.row
-/   /! /.container
-/ /! /#middle
-/ section#content
-/   .container
-/     .row
-/       .col-xs-12.col-sm-8.wow.fadeInDown
-/         .tab-wrap
-/           .media
-/             .parrent.pull-left
-/               ul.nav.nav-tabs.nav-stacked
-/                 li
-/                   a.analistic-01 data-toggle="tab" href="#tab1"  Responsive Web Design
-/                 li.active
-/                   a.analistic-02 data-toggle="tab" href="#tab2"  Premium Plugin Included
-/                 li
-/                   a.tehnical data-toggle="tab" href="#tab3"  Predefine Layout
-/                 li
-/                   a.tehnical data-toggle="tab" href="#tab4"  Our Philosopy
-/                 li
-/                   a.tehnical data-toggle="tab" href="#tab5"  What We Do?
-/             .parrent.media-body
-/               .tab-content
-/                 #tab1.tab-pane.fade
-/                   .media
-/                     .pull-left
-/                       img.img-responsive src="images/tab2.png" /
-/                     .media-body
-/                       h2 Adipisicing elit
-/                       p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
-/                 #tab2.tab-pane.fade.active.in
-/                   .media
-/                     .pull-left
-/                       img.img-responsive src="images/tab1.png" /
-/                     .media-body
-/                       h2 Adipisicing elit
-/                       p
-/                         | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
-/                 #tab3.tab-pane.fade
-/                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-/                 #tab4.tab-pane.fade
-/                   p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words
-/                 #tab5.tab-pane.fade
-/                   p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
-/               /! /.tab-content
-/             /! /.media-body
-/           /! /.media
-/         /! /.tab-wrap
-/       /! /.col-sm-6
-/       .col-xs-12.col-sm-4.wow.fadeInDown
-/         .testimonial
-/           h2 Testimonials
-/           .media.testimonial-inner
-/             .pull-left
-/               img.img-responsive.img-circle src="images/testimonials1.png" /
-/             .media-body
-/               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-/               span
-/                 strong -John Doe/
-/                 | Director of corlate.com
-/           .media.testimonial-inner
-/             .pull-left
-/               img.img-responsive.img-circle src="images/testimonials1.png" /
-/             .media-body
-/               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-/               span
-/                 strong -John Doe/
-/                 | Director of corlate.com
-/     /! /.row
-/   /! /.container
-/ /! /#content
-/ section#partner
-/   .container
-/     .center.wow.fadeInDown
-/       h2 Our Partners
-/       p.lead
-/         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-/         br/
-/         | et dolore magna aliqua. Ut enim ad minim veniam
-/     .partners
-/       ul
-/         li
-/           a href="#"
-/             img.img-responsive.wow.fadeInDown data-wow-delay="300ms" data-wow-duration="1000ms" src="images/partners/partner1.png" /
-/         li
-/           a href="#"
-/             img.img-responsive.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms" src="images/partners/partner2.png" /
-/         li
-/           a href="#"
-/             img.img-responsive.wow.fadeInDown data-wow-delay="900ms" data-wow-duration="1000ms" src="images/partners/partner3.png" /
-/         li
-/           a href="#"
-/             img.img-responsive.wow.fadeInDown data-wow-delay="1200ms" data-wow-duration="1000ms" src="images/partners/partner4.png" /
-/         li
-/           a href="#"
-/             img.img-responsive.wow.fadeInDown data-wow-delay="1500ms" data-wow-duration="1000ms" src="images/partners/partner5.png" /
-/   /! /.container
-/ /! /#partner
-/ section#conatcat-info
-/   .container
-/     .row
-/       .col-sm-8
-/         .media.contact-info.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-/           .pull-left
-/             i.fa.fa-phone
-/           .media-body
-/             h2 Have a question or need a custom quote?
-/             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80
-/   /! /.container
-/ /! /#conatcat-info
-/ section#bottom
-/   .container.wow.fadeInDown data-wow-delay="600ms" data-wow-duration="1000ms"
-/     .row
-/       .col-md-3.col-sm-6
-/         .widget
-/           h3 Company
-/           ul
-/             li
-/               a href="#"  About us
-/             li
-/               a href="#"  We are hiring
-/             li
-/               a href="#"  Meet the team
-/             li
-/               a href="#"  Copyright
-/             li
-/               a href="#"  Terms of use
-/             li
-/               a href="#"  Privacy policy
-/             li
-/               a href="#"  Contact us
-/       /! /.col-md-3
-/       .col-md-3.col-sm-6
-/         .widget
-/           h3 Support
-/           ul
-/             li
-/               a href="#"  Faq
-/             li
-/               a href="#"  Blog
-/             li
-/               a href="#"  Forum
-/             li
-/               a href="#"  Documentation
-/             li
-/               a href="#"  Refund policy
-/             li
-/               a href="#"  Ticket system
-/             li
-/               a href="#"  Billing system
-/       /! /.col-md-3
-/       .col-md-3.col-sm-6
-/         .widget
-/           h3 Developers
-/           ul
-/             li
-/               a href="#"  Web Development
-/             li
-/               a href="#"  SEO Marketing
-/             li
-/               a href="#"  Theme
-/             li
-/               a href="#"  Development
-/             li
-/               a href="#"  Email Marketing
-/             li
-/               a href="#"  Plugin Development
-/             li
-/               a href="#"  Article Writing
-/       /! /.col-md-3
-/       .col-md-3.col-sm-6
-/         .widget
-/           h3 Our Partners
-/           ul
-/             li
-/               a href="#"  Adipisicing Elit
-/             li
-/               a href="#"  Eiusmod
-/             li
-/               a href="#"  Tempor
-/             li
-/               a href="#"  Veniam
-/             li
-/               a href="#"  Exercitation
-/             li
-/               a href="#"  Ullamco
-/             li
-/               a href="#"  Laboris
-/       /! /.col-md-3
-/ /! /#bottom
-footer#footer.midnight-blue
-  .container
-    .row
-      .col-sm-6
-        | &copy; 2015 Vargas Five Stars, CA
-        |  Todos los derechos reservados.
-      .col-sm-6
-        ul.pull-right
-          li
-            a href="#"  Inicio
-          li
-            a href="#"  Sobre Nosotros
-          li
-            a href="#"  Preguntas Frecuentes
-          li
-            a href="#"  Contacto
-/! /#footer
+#wrapper
+  #header
+    /! class="sticky" for sticky menu
+    /! Top Bar
+    header#topBar
+      .container
+        /! mail , phone
+        .call-us.fsize13.pull-left.margin-top10
+          | Llamanos hoy:
+          strong +58-212-3551097 
+          span.hide_mobile
+            |  -  
+            a href="mailto:vargasfivestar@gmail.com"  vargasfivestar@gmail.com
+        .pull-right.fsize13.hide_mobile
+          .block.text-right
+            /! social
+            a.social.fa.fa-facebook href="https://www.facebook.com/VargasFiveStar/?fref=ts" target="_blank"
+            a.social.fa.fa-twitter href="https://twitter.com/VargasFiveStar" target="_blank"
+            a.social.fa.fa-google-plus href="https://plus.google.com/108531670856346514035" target="_blank"
+          /! /social
+      /! /.container
+    /! /Top Bar
+    /! Top Nav
+    header#topNav
+      .container
+        /! Logo
+        a.logo href="index.html" 
+          img alt="" width="220" src="assets/images/logo.png" /
+        /! Mobile Menu Button
+        button.btn.btn-mobile data-target=".nav-main-collapse" data-toggle="collapse" 
+          i.fa.fa-bars
+        /! Top Nav
+        .navbar-collapse.nav-main-collapse.collapse
+          nav.nav-main
+            ul#topMain.nav.nav-pills.nav-main
+              li.mega-menu.dropdown.active
+                a.dropdown-toggle href="#" 
+                  | INICIO
+                  span bienvenido
+              li.dropdown.mega-menu
+                a.dropdown-toggle href="#" 
+                  | SERVICIOS
+                  span turisticos
+              li.dropdown
+                a.dropdown-toggle href="#" 
+                  | DESTINOS
+                  span paquetes
+              li.dropdown
+                a.dropdown-toggle href="#" 
+                  | ALIADOS
+                  span comerciales
+              li.dropdown
+                a.dropdown-toggle href="#" 
+                  | SOBRE NOSOTROS
+                  span historia
+              li.dropdown
+                a.dropdown-toggle href="#" 
+                  | CONTACTO
+                  span escribenos
+        /! /Top Nav
+      /! /.container
+    /! /Top Nav
+  /! REVOLUTION SLIDER
+  .slider.fullwidthbanner-container.roundedcorners
+    .fullwidthbanner
+      ul.hide
+        /! SLIDE
+        li data-masterspeed="300" data-saveperformance="off" data-slotamount="7" data-transition="fade" 
+          img alt="" data-bgfit="cover" data-bgposition=("center top") data-bgrepeat="no-repeat" data-lazyload="assets/images/demo/medanos.jpg" src="assets/images/1x1.png" /
+          .tp-caption.mediumlarge_light_white.lfb.tp-resizeme data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" data-hoffset="70" data-speed="1000" data-splitin="none" data-splitout="none" data-start="1400" data-x="left" data-y="233" 
+            | + Seguridad
+          .tp-caption.mediumlarge_light_white.lft.tp-resizeme data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" data-hoffset="70" data-speed="1000" data-splitin="none" data-splitout="none" data-start="1200" data-x="left" data-y="185" 
+            | + Confiabilidad
+          .tp-caption.block_black.sfl.tp-resizeme data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" data-speed="750" data-splitin="none" data-splitout="none" data-start="1900" data-x="70" data-y="316" 
+            | Servicios y atención VIP en todo momento
+          .tp-caption.block_black.sfr.tp-resizeme data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" data-speed="750" data-splitin="none" data-splitout="none" data-start="2200" data-x="70" data-y="360" 
+            | Translados y asistencias para ti y tu familia
+        /! SLIDE
+        li data-delay="10000" data-masterspeed="300" data-slotamount="14" data-transition="fade" 
+          /! COVER IMAGE
+          img alt="" data-bgfit="cover" data-bgposition=("left top") data-bgrepeat="no-repeat" data-lazyload="assets/images/demo/flickr_37.jpg" src="assets/images/1x1.png" /
+          .tp-caption.medium_text.lfl.stl data-easing="easeOutExpo" data-speed="300" data-start="500" data-x="63" data-y="200" 
+            | Vargas Five Star
+          .tp-caption.large_bold_white.sft.stb data-easing="easeOutExpo" data-speed="300" data-start="1000" data-x="60" data-y="223" 
+            | TE ESPERAMOS
+          .tp-caption.italic.small_light_white.sft.stb data-easing="easeOutExpo" data-speed="500" data-start="2000" data-x="63" data-y="286" 
+            | Hacemos volar tus sueños
+          .tp-caption.sft.medium_light_white data-easing="easeOutExpo" data-speed="600" data-start="1500" data-x="600" data-y="60" 
+            img alt="" src="assets/images/demo/desktop_slider.png" /
+      .tp-bannertimer
+  /! /REVOLUTION SLIDER
+  /! CALLOUT
+  .callout.dark
+    /! add "styleBackgroundColor" class for colored background and white text OR "dark" for a dark callout
+    .container
+      .row
+        .col-md-9
+          /! title + shortdesc
+          h3 Somos tu mejor opción para coordinar tu viaje.
+          p Entra en nuestra area de servicios y conoce nuestro trabajo.
+        .col-md-3
+          /! button
+          a.btn.btn-primary.btn-lg href="#purchase"  Ver Servicios
+  /! /CALLOUT
+  /! WELCOME
+  section
+    .container
+      .row
+        .col-md-6
+          h2
+            | Bienvenido a 
+            span.word-rotator
+              /! word rotator
+              span.items.bold.styleColor
+                span Venezuela
+                span Caracas
+                span Merida
+                span Los Roques
+                span Canaima
+            /! /word rotator
+          p.lead Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet
+            succeed
+              em.styleColor hendrerit volutpat
+            | Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis, eu hendrerit enim scel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent scelerisque volutpat turpis.
+        .col-md-6.text-center
+          img.img-responsive.animate_fade_in alt="" src="assets/images/demo/mapa-ve.png" /
+      .row.text-center.countTo
+        .col-md-4.col-sm-4
+          span.boxed.radius3
+            strong.styleColor data-to="15"  15
+            label Años de experiencia
+        .col-md-4.col-sm-4
+          span.boxed.radius3
+            strong.styleColor data-to="20"  20
+            label Destinos diferentes
+        .col-md-4.col-sm-4
+          span.boxed.radius3
+            strong.styleColor data-to="10000"  10000
+            label Clientes felices 
+  /! /WELCOME
+  /! DARK CALLOUT
+  .callout.dark.arrow-down
+    .container.text-center
+      h2 ¿Quieres conocer Venezuela?
+      p No importa de que parte del mundo seas, incluso si vives eres venezolano no te puedes perder los princepales destinos de nuestro hermoso país. Venezuela es uno de los lugares mas exoticos del planeta... solo mira...
+  /! /DARK CALLOUT
+  /! VIDEO , PARALLAX
+  section.nopadding
+    .parallax.parallax-1.text-center style="background-image:url(assets/images/demo/layerslider/abyss-bg.jpg);" 
+      .container
+        .row
+          /! responsive centered video
+          .col-md-2.col-sm-2
+            /! left spacer
+          .col-md-8.col-sm-8.col-xs-12
+            .embed-responsive.embed-responsive-16by9
+              /! bootstrap responsive video
+              
+              iframe width="854" height="480" src="https://www.youtube.com/embed/8z-OeMHxTP0" frameborder="0" allowfullscreen="true"
+            /! /bootstrap responsive video
+          .col-md-2.col-sm-2
+            /! right spacer
+        /! responsive centered video
+  /! /VIDEO , PARALLAX
+  /! SECTION
+  / section
+  /   .container
+  /     .row
+  /       .col-md-6.col-sm-6
+  /         h3
+  /           strong Amazing
+  /           | tools to build
+  /           strong awesome
+  /           | websites
+  /         ul.list-icon.spaced.check-circle
+  /           li Fully responsive so your content will always look good on any device
+  /           li Cool sliders give you the opportunity to showcase your content
+  /           li Advanced template options to easily customize your website
+  /           li Multiple layout options for home pages, portfolio, shop and blog
+  /           li Incredible shortcodes for easy customization
+  /           li Free lifetime update because we care about your website as much as you
+  /         .margin-top20
+  /           /! buttons
+  /           a.btn.btn-primary href="#purchase" rel="nofollow" target="_blank"  PURCHASE EPONA
+  /           a.btn.btn-default href="#"  PRICING
+  /         /! /buttons
+  /       .col-md-6.col-sm-6
+  /         /! right image
+  /         img.img-responsive.appear-animation alt="" data-animation="fadeIn" src="assets/images/demo/features.jpg" /
+  /       /! /right image
+  / /! /SECTION
+  / /! SECTION
+  / section.alternate
+  /   .container
+  /     header.text-center
+  /       h2 We Are Dedicated To Our Users &amp; Product
+  /       p.lead We thrive on making Epona the most complete and trusted template on wrapbootstrap
+  /       .divider.half-margins
+  /         /! divider
+  /     .row
+  /       .col-md-4.col-sm-6
+  /         h4 Passion
+  /         p.dropcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et elementum erat, biluctus mi. Quisque consequat risus quis tincidunt fringilla. Ut sed rhoncus metus, in rhoncus dolor. Integer tempor ligula est, sed luctus metus tempus a. Pellentesque tempor libero et arcu bibendum mollis. Aliquam eu odio eget diam egestas euismod vel sed orc aenean.
+  /       .col-md-4.col-sm-6
+  /         h4 Precision
+  /         p Pellentesque tempor libero et arcu bibendum mollis. Donec eu porta elit. Aliquam porta sollicitudin ante, ac fermentum orci mattis et. Phasellus ac nibh eleifend, sagittis purus nec, elementum massa. Quisque tincidunt sapien a sem porttitor, id convallis dolor pharetra. Donec tempor cursus facilisis. Ut eu elementum arcu, vel hendrerit nisi. Cras sed euismod nibh, a adipiscing.
+  /       .col-md-4.col-sm-12
+  /         /! ACCORDION
+  /         #accordion2.accordion.panel-group.transparent
+  /           .panel.panel-default
+  /             .panel-heading
+  /               h4.panel-title
+  /                 a data-parent="#accordion2" data-toggle="collapse" href="#acordion_1" 
+  /                   i.fa.fa-plus
+  /                   | Our Company Mission
+  /             #acordion_1.collapse
+  /               .panel-body
+  /                 | Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+  /           .panel.panel-default
+  /             .panel-heading
+  /               h4.panel-title
+  /                 a data-parent="#accordion2" data-toggle="collapse" href="#acordion_2" 
+  /                   i.fa.fa-plus
+  /                   | The Epona Inside
+  /             #acordion_2.collapse
+  /               .panel-body
+  /                 | Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+  /           .panel.panel-default
+  /             .panel-heading
+  /               h4.panel-title
+  /                 a data-parent="#accordion2" data-toggle="collapse" href="#acordion_3" 
+  /                   i.fa.fa-plus
+  /                   | The Epona Philosophy
+  /             #acordion_3.collapse
+  /               .panel-body
+  /                 | Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+  /           .panel.panel-default
+  /             .panel-heading
+  /               h4.panel-title
+  /                 a data-parent="#accordion3" data-toggle="collapse" href="#acordion_4" 
+  /                   i.fa.fa-plus
+  /                   | Join our great team
+  /             #acordion_4.collapse
+  /               .panel-body
+  /                 | Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+  /         /! /ACCORDION
+  / /! /SECTION
+  /! CALLOUT
+  .callout.dark
+    /! add "styleBackgroundColor" class for colored background and white text OR "dark" for a dark callout
+    .container
+      .row
+        .col-md-9
+          /! title + shortdesc
+          h3 Te hemos convencido?
+          p
+            | Si es asi, solo contactanos 
+            strong  por cualquier medio 
+            | y veras lo que tenemos para ti.
+        .col-md-3
+          /! button
+          a.btn.btn-primary.btn-lg href="#purchase" rel="nofollow" target="_blank"  Contacto
+  /! /CALLOUT
+  /! FOOTER
+  footer#footer
+    .container
+      .row
+        /! col #1
+        .logo_footer.dark.col-md-3
+          img.logo alt="" height="50" src="assets/images/logo.png" /
+          p.block
+            | Aeropuerto Nacional e Internacional de Maiquetía 
+            br/
+            | Estado Vargas - Venezuela
+            br/
+            | Email: vargasfivestar@gmail.com
+            br/
+            | Telefono Ofc 1: +58 (212) 355-26-24
+            br/
+            | Telefono Ofc 2: +58 (212) 355-10-97
+            br/
+          p.block
+            /! social
+            a.social.fa.fa-facebook href="https://www.facebook.com/VargasFiveStar/?fref=ts" target="_blank"
+            a.social.fa.fa-twitter href="https://twitter.com/VargasFiveStar" target="_blank"
+            a.social.fa.fa-google-plus href="https://plus.google.com/108531670856346514035" target="_blank"
+          /! /social
+        /! /col #1
+        /! col #2
+        .spaced.col-md-5
+          h4
+            | Opiniones 
+            strong Recientes
+          ul.list-unstyled
+            li
+              a.block href="#"  Sus servicios son de primera y canaima fue un sueño hecho realidad.
+              small Febrero 29, 2016 - Carla Valentino
+            li
+              a.block href="#"  Excelente coordición cero contratiempos durante el viaje y nuestra estadias 
+              small Enero 15, 2016 - Manuel Cardenas
+            li
+              a.block href="#"  Excelente equipo de asistencia muy coordiales y de buen trato la posada y la comida espectaculares
+              small Diciembre 30, 2016
+        /! /col #2
+        /! col #4
+        .spaced.col-md-4.col-sm-4
+          h4
+            | Sobre
+            strong  Nosotros
+          p
+            | VargasFiveStar es una compañia dedicada al ofrecer servicios turisticos con altos estandares de calidad gracias a sus 15 años de experiencia en el rubro.
+          h4
+            small
+              strong Suscribete a nuestro Boletin
+          form#newsletterSubscribe.input-group action="php/newsletter.php" method="post" 
+            input#newsletter_email.form-control name="newsletter_email" placeholder=("E-mail Address") required="" type="email" value="" /
+            span.input-group-btn
+              button.btn.btn-primary Enviar
+        /! /col #4
+    hr/
+    .copyright
+      .container.text-center.fsize12
+        | VargasFiveStar
+        | \&bull; Todos los derechos reservados &copy; Vargas Five Star C.A. &nbsp;
+  /! /FOOTER
+  a#toTop href="#" 
+/! /#wrapper
+/! JAVASCRIPT FILES
+type="text/javascript" 

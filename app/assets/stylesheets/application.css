@@ -10,7 +10,35 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require font-awesome
+ *= require bootstrap.min.css
+ *= require font-awesome.css
+ *= require sky-forms.css
+ *= require weather-icons.min.css
+ *= require line-icons.css
+ *= require magnific-popup.css
+ *= require animate.css
+ *= require flexslider.css
+ *= require revolution-slider.css
+ *= require layerslider.css
+ *= require essentials.css
+ *= require layout.css
+ *= require header-2.css
+ *= require footer-default.css
+ *= require color_scheme/yellow.css
  *= require_self
+
  */
+
+ #topNav ul.nav>li a{
+   color: #000;
+   padding: 25px 23px;
+ }
+
+ #topNav ul.nav>li>a>span{
+   color: #717171;
+ }
+
+ .tp-caption.block_black{
+   background-color: rgba(0, 0, 0, 0.4);
+ }
